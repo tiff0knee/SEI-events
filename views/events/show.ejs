@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Document</title>
+</head>
+<body>
+    <%= event %>
+    <h2>Event Details</h2>
+    <%= event.eventName %>
+    <%= event.date %>
+    <% event.attendees.foreach(a){ %>
+        <%= a.name %>
+    <% }; %>
+    <%= event.topics.foreach(a) %>
+</body>
+</html>
+
+
+<% events.forEach(function(e) { %>
+    <tr>
+      <td><%= e.eventName %></td>
+      <td><%= e.date %></td>
+      <td><a href="/events/<%= e._id %>">DETAILS</a></td>
+    </tr>
+    <% }); %>

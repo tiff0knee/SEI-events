@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,14 +23,25 @@
   </nav>
   <main>
 
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-
-    <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
-    <br/>
-
-    <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
-
+    <h1>All Events</h1>
+    <table >
+        <thead>
+          <tr>
+            <th>Event Name</th>
+            <th>Date</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% events.forEach(function(e) { %>
+            <tr>
+              <td><%= e.eventName %></td>
+              <td><%= e.date %></td>
+              <td><a href="/events/<%= e._id %>">DETAILS</a></td>
+            </tr>
+            <% }); %>
+          </tbody>
+        </table>
   </main>
 </body>
 </html>

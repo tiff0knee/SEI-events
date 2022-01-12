@@ -18,17 +18,12 @@
   <nav>
     <a href="/events/new" <%- title === 'Add Event' ? 'class="active"' : '' %>>ADD EVENT</a>
     <a href="/students" <%- title === 'View Account' ? 'class="active"' : '' %>>VIEW ACCOUNT</a>
-    <a href="/events/index" <%- title === 'All Events' ? 'class="active"' : '' %>>ALL EVENTS</a>
+    <a href="/events" <%- title === 'All Events' ? 'class="active"' : '' %>>ALL EVENTS</a>
   </nav>
   <main>
 
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-
-    <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
-    <br/>
-
-    <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
+    <h1>Student Profile</h1>
+  
 
   </main>
 </body>
