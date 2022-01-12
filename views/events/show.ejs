@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div>Event Name </div>
+    <h2>Event Name </h2>
     <div><%= event.eventName %></div>
 
     <div>Creator</div>
@@ -45,7 +45,11 @@
 <h2>Join the event!</h2>
 <form id="join-event" method="POST"
   action="/event/<%= event._id %>">
-  <input type="submit" value = <%= student.name %> >
+  <label>Enter first name here:</label>
+  <input type="text" name="fname" >
+  <label>Enter last name here:</label>
+  <input type="text" name="lname" >
+  <input type="submit" value="Submit">
 </form>
 
 
