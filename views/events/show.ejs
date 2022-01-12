@@ -8,22 +8,45 @@
     <title>Document</title>
 </head>
 <body>
-    <%= event %>
-    <h2>Event Details</h2>
-    <%= event.eventName %>
-    <%= event.date %>
-    <% event.attendees.foreach(a){ %>
-        <%= a.name %>
-    <% }; %>
-    <%= event.topics.foreach(a) %>
+    <div>Event Name </div>
+    <div><%= event.eventName %></div>
+
+    <div>Creator</div>
+    <%= event.creator%>
+    <div>Event Date </div>
+    <div><%= event.date %></div>
+    <div>Topics </div>
+    <div><%= event.topics.join(', ') %></div>   
+    <div>Attendees </div>
+    <% if (event.attendees.length) { %>
+        <table>
+          <thead>
+            <tr>
+                <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% event.attendees.forEach(function(a) { %>
+              <tr>
+                <td><%= a.attendees %></td>
+              </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      <% } else { %>
+        <h5>No One Joined Yet</h5>
+      <% } %>
+
+
 </body>
 </html>
 
+<br>
+<h2>Join the event!</h2>
+<form id="join-event" method="POST"
+  action="/event/<%= event._id %>">
+  <input type="submit" value = <%= student.name %> >
+</form>
 
-<% events.forEach(function(e) { %>
-    <tr>
-      <td><%= e.eventName %></td>
-      <td><%= e.date %></td>
-      <td><a href="/events/<%= e._id %>">DETAILS</a></td>
-    </tr>
-    <% }); %>
+
+
