@@ -28,7 +28,7 @@
           <tbody>
             <% event.attendees.forEach(function(a) { %>
               <tr>
-                <td><%= a.attendees %></td>
+                <td><%= a.attendeeName %></td>
               </tr>
             <% }); %>
           </tbody>
@@ -44,11 +44,9 @@
 <br>
 <h2>Join the event!</h2>
 <form id="join-event" method="POST"
-  action="/event/<%= event._id %>">
-  <label>Enter first name here:</label>
-  <input type="text" name="fname" >
-  <label>Enter last name here:</label>
-  <input type="text" name="lname" >
+  action="/join/<%= event._id %>">
+  <label>Enter name here:</label>
+  <input type="text" name="name" >
   <input type="submit" value="Submit">
 </form>
 
