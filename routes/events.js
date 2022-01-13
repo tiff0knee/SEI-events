@@ -12,17 +12,18 @@ router.post('/', eventsCtrl.create);
 
 
 
-
 //create new event
 router.get('/new', eventsCtrl.new);
 
-
-//update the details of an event
-router.put('/:id', eventsCtrl.update);
 
 //delete event
 router.get('/', eventsCtrl.delete);
 
 //show details of event
 router.get('/:id', eventsCtrl.show);
+//update the details of an event
+router.put('/:id', eventsCtrl.update);
+
+
+
 module.exports = router;
