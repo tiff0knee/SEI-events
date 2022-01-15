@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@900&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
     <!-- Google Icon Fonts used by Materialize -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Materialize CSS Framework -->
@@ -15,21 +19,31 @@
   <title>SEI Study Sessions</title>
 </head>
 <body>
-  <nav>
-    <a href="/events/new" <%- title === 'Add Event' ? 'class="active"' : '' %>>ADD EVENT</a>
-    <a href="/students" <%- title === 'View Account' ? 'class="active"' : '' %>>VIEW ACCOUNT</a>
-    <a href="/events" <%- title === 'All Events' ? 'class="active"' : '' %>>ALL EVENTS</a>
-  </nav>
+    <div class=main-body>
+        <nav>
+          <a href="/events/new" <%- title === 'Add Event' ? 'class="active"' : '' %>>ADD EVENT</a>
+          <a href="/students" <%- title === 'View Account' ? 'class="active"' : '' %>>VIEW ACCOUNT</a>
+          <a href="/events/index" <%- title === 'All Events' ? 'class="active"' : '' %>>ALL EVENTS</a>
+      
+          <span class="google-loginout">
+          <a href="/">HOME</a>  
+          <a href="/auth/google">Login with Google</a>   
+          <a href="/logout">Log Out</a>
+          </span>
+         </nav>
   <main>
 
-    <h1>Student Profile</h1>
-        <h2> Student Name</h2>
-        <% if (student._id.equals(user && user._id)) { %>
-            <div class="student-info-card">
-                <%= index.user %>
-                <%= index.name %>
-            </div>
+    <h3>Student Profile</h3>
+        <h5> Student Name</h5>
+        <div > <%= students.user %></div>
+        <h5>Email Address</h5>
+        <div><%= students.name %></div>   
+        <h5>Events Created</h5>
+
+        <h5>Events Joined</h5>
+
 
   </main>
+</div>
 </body>
 </html>

@@ -11,4 +11,7 @@ function isLoggedIn(req, res, next) {
   res.redirect('/auth/google');
 }
 
+//show student details
+router.get('/', studentsCtrl.show);
+
 module.exports = router;

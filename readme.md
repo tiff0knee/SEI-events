@@ -7,6 +7,29 @@
 -Express
 -mongoDB
 -mongoose
+-javascript
 -HTML
 -CSS
--
+
+##Getting Started
+Access the project from the link below:
+https://sei-study-sessions.herokuapp.com/
+
+There is an oauth feature that will allow you to sign in from a google account.
+
+Once signed in, you can create a new event by clicking on the top left button "Add Event".
+
+If you prefer to join other existing events, click on the All Events button. Click on the Details link to see additional details about the event. Enter your name into the text box if this is an event you wish to partake in.
+
+## Screenshots:
+![](mainpage.png)
+![](createnewevent.png)
+![](allevents.png)
+![](eventdetails.png)
+
+## Future Enhancements:
+-fix oauth
+-pull events user created and signed up for in the account view
+-remove textbox from the join event. The submit button will pull name from user's google account to populate the sign up page.
+
+

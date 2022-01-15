@@ -40,7 +40,7 @@ event.save(function(error){
 
 async function deleteEvent (req, res) {
 
-    await Event.findOneAndDelete(req.params.id);
+    await Event.findOneAndRemove(req.params.id);
     res.redirect('/events/index');
 }
 
