@@ -10,14 +10,16 @@ function index(req,res) {
     })
 }
 
+
+
 function newEvent(req, res) {
-      res.render('events/new', {event: 'Add Event'});
+      res.render('events/new', {event: 'Add Event', title: 'Add Event'});
 }
 
 async function show(req,res) {
   const event = await Event.findById(req.params.id)
     res.render('events/show', {
-        event: event
+        event: event, title: 'Add Event'
     });
 }
 
@@ -37,8 +39,8 @@ event.save(function(error){
 
 
 async function deleteEvent (req, res) {
-    console.log(req.params.id);
-    await Event.findOneAndDelete(req.params.id);
+
+    await Event.findOneAndRemove(req.params.id);
     res.redirect('/events/index');
 }
 

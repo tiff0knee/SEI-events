@@ -14,12 +14,15 @@ const eventSchema = new Schema({
     creator: String,
     eventName: String,
     cohort: Number,
-    date: Date,
+    date: {type: Date, 
+    default() {
+        return new Date.getFullYear();
+    }},
     topics: [String],
     attendees: [attendeesSchema]},
 
     {
-        timestamp: true,
+        timestamps: true,
     }
     
 )
