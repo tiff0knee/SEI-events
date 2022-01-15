@@ -36,9 +36,10 @@ event.save(function(error){
 }
 
 
-function deleteEvent (req, res) {
-    Event.deleteOne(req.params.id);
-    res.redirect('/');
+async function deleteEvent (req, res) {
+    console.log(req.params.id);
+    await Event.findOneAndDelete(req.params.id);
+    res.redirect('/events/index');
 }
 
 function update(req, res) {
