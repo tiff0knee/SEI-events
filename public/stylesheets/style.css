@@ -1,8 +1,29 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #e51d38;
 }
 
+.main-body {
+  height: 800px;
+  width: 1500px;
+  background-color: white;
+  flex-direction: column;
+  display: flex;
+}
+.google-loginout {
+    float: right;
+  
+}
+.main-page-content {
+  top: 50%;
+  left: 50%;
+}
 a {
   color: #00B7FF;
+  margin: 10px; 
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Yantramanav', sans-serif;
 }
