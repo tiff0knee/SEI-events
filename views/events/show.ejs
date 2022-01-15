@@ -17,12 +17,11 @@
     <div><%= event.date %></div>
     <div>Topics </div>
     <div><%= event.topics.join(', ') %></div>   
-    <div>Attendees </div>
+    <div><h2>Attendees</h2> </div>
     <% if (event.attendees.length) { %>
         <table>
           <thead>
             <tr>
-                <th>Name</th>
             </tr>
           </thead>
           <tbody>
@@ -46,8 +45,8 @@
 <form id="join-event" method="POST"
   action="/join/<%= event._id %>">
   <label>Enter name here:</label>
-  <input type="text" name="name" >
-  <input type="submit" value="Submit">
+  <input type="text" name="attendeeName">
+  <button type="submit"> Submit </button>
 </form>
 
 

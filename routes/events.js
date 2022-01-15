@@ -10,14 +10,14 @@ router.get('/index', eventsCtrl.index);
 
 router.post('/', eventsCtrl.create);
 
-
+//delete event
+router.delete('/:id', eventsCtrl.delete);
 
 //create new event
 router.get('/new', eventsCtrl.new);
 
 
-//delete event
-router.get('/', eventsCtrl.delete);
+
 
 //show details of event
 router.get('/:id', eventsCtrl.show);
